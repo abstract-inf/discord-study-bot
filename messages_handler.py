@@ -24,11 +24,11 @@ def greeting(msg):
                       'الو', 'السلام عليكم', 'سلام', 'السلام عليكم ورحمة الله وبركاته', 'السلام عليكم ورحمة الله', 'السلام عليكم ورحمة الله وبركاته']
 
     bad_words = [
-        "anal", "anus", "arse", "ass", "balls", "ballsack", "bastard", "biatch", "bitch", "bloody",
+        "anal", "anus", "arse", "ass", "asshole", "ass hole", "balls", "ballsack", "bastard", "biatch", "bitch", "bloody",
         "blow job", "blowjob", "bollock", "bollok", "boner", "boob", "bugger", "bum", "butt", "buttplug",
         "clitoris", "cock", "cum", "cumming" "coon", "crap", "cunt", "damn", "dick", "dildo", "dyke", "fucking", "fag",
         "feck", "felching", "fellate", "fellatio", "flange", "fuck", "fudge packer", "fudgepacker",
-        "God damn", "Goddamn", "homo", "jerk", "jizz", "knob end", "knobend", "labia", "lmao",
+        "God damn", "Goddamn", "homo", "jerk", "jizz", "knob end", "kill yourself", "kys", "knobend", "labia", "lmao",
         "lmfao", "muff", "nigga", "nigger", "omg", "penis", "piss", "poop", "prick", "pube", "pussy",
         "queer", "s hit", "scrotum", "sex", "sh1t", "shit", "shitting", "slut", "smegma", "spunk", "tit", "tosser",
         "turd", "twat", "vagina", "wank", "whore", "wtf", "سكس", "طيز", "شرج", "لعق", "لحس", "مص",
