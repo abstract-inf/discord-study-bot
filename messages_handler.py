@@ -87,8 +87,6 @@ def greeting(msg):
         response = random.choice(responses)
         return response
     
-    return None
-
 def send_sound_file(msg):
     sound_files = {
         'amro is': 'media/CDs/amro/amro.jpg',
@@ -101,15 +99,37 @@ def send_sound_file(msg):
 
     if msg in sound_files and os.path.exists(sound_files[msg]):
         print(f"{GREEN}Sent media file for:{RESET} {msg}")
-        return {'file': sound_files[msg]}
-    return None
+        return {'file': sound_files[msg]} # this is the format for sending a file
+
+
+def send_logs(msg):
+    if msg == '!study_logs':
+        print(f"{GREEN}Sent study_logs.csv{RESET}")
+        return {'file': 'study_logs.csv'} # this is the format for sending a file
+    elif msg == '!channel_logs':
+        print(f"{GREEN}Sent channel_logs.csv{RESET}")
+        return {'file': 'channel_logs.csv'} # this is the format for sending a file
+    
 
 def find_response(msg):
     # a list of all the functionalities that the bot can do based on the message
-    functionalities = [greeting, send_sound_file]
+    functionalities = [greeting, send_sound_file, send_logs]
 
     # iterate over the functionalities to find which response to return
     for function in functionalities:
         response = function(msg) # call the function with the message
         if response:
             return response
+    
+    # if no response was found, return None
+    return None
+
+
+if __name__ == '__main__':
+    input_message = input("Enter a message: ")
+    response = find_response(input_message)
+
+    if response:
+        print(response)
+    else:
+        print("No response found")
