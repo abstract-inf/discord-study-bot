@@ -99,6 +99,10 @@ async def on_message(message):
     # this is not to confuse the bot with its own messages
     if message.author == client.user:
         return
+    
+    # this is to ensure that the bot only responds to messages in the channel with the name 'denshi-bot'
+    if message.channel.name != channel_logs_name:
+        return
 
     # this is supposed to handle empty messages by ignoring them
     if message.content == '':  # ignore empty messages
